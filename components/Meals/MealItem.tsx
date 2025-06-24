@@ -1,16 +1,19 @@
 import classes from "./MealItem.module.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 export interface MealItemType{
     title:string;
-    meal:string;
-    image:string;
+    slug:string;
+    image:StaticImageData;
     summary:string;
+    instructions:string | TrustedHTML;
     creator:string;
+    creator_email:string;
 }
 
-export default function MealItem({ title, meal, image, summary, creator }:MealItemType) {
+export default function MealItem({ title, slug, image, summary, creator }:MealItemType) {
+ 
   return (
     <article className={classes.meal}>
       <header>
@@ -25,7 +28,7 @@ export default function MealItem({ title, meal, image, summary, creator }:MealIt
       <div className={classes.content}>
         <p className={classes.summary}>{summary}</p>
         <div className={classes.actions}>
-          <Link href={`/meals/${meal}`}>View Details</Link>
+          <Link href={`/meals/${slug}`}>View Details</Link>
         </div>
       </div>
     </article>

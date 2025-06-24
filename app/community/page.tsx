@@ -4,6 +4,11 @@ import communityIcon from "@/assets/icons/community.png";
 import mealIcon from "@/assets/icons/meal.png";
 import eventsIcon from "@/assets/icons/events.png";
 
+export const metadata = {
+  title: "Community"
+}
+
+
 export default function CommunityPage() {
      return (
     <>

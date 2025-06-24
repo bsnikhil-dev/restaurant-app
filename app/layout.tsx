@@ -3,7 +3,7 @@ import { Header } from '@/components/Header/Header';
 import './globals.css';
 
 export const metadata = {
-  title: "Restaurant Application"
+  title: "Restaurant App"
 }
 
 export default function RootLayout({
