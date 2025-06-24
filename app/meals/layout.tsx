@@ -6,7 +6,7 @@ export default function MealsLayout({
     return (
         <div>
             <main>
-                <h1>Meals Layout</h1>
+                {/* <h1>Meals Layout</h1> */}
                 {children}
             </main>
         </div>
